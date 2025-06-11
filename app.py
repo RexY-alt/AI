@@ -158,7 +158,7 @@ with col1:
     if uploaded_file is not None:
         # Display uploaded image
         image = Image.open(uploaded_file).convert('RGB')
-        st.image(image, caption="Uploaded Image", use_column_width=True)
+        st.image(image, caption="Uploaded Image", use_container_width=True)
 
         # Add predict button
         if st.button("🔍 Analyze Image", type="primary"):
@@ -187,7 +187,7 @@ with col2:
         try:
             response = requests.get(sample_images[selected_sample])
             sample_image = Image.open(BytesIO(response.content)).convert('RGB')
-            st.image(sample_image, caption=f"Sample Image: {selected_sample}", use_column_width=True)
+            st.image(sample_image, caption=f"Sample Image: {selected_sample}", use_container_width=True)
 
             # Auto-analyze sample image
             with st.spinner("Analyzing sample image..."):
@@ -335,4 +335,4 @@ if st.button("🔄 Reset Application"):
     for key in ['vgg_results', 'resnet_results', 'vgg_time', 'resnet_time']:
         if key in st.session_state:
             del st.session_state[key]
-    st.experimental_rerun()
+    st.rerun()
