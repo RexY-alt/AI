@@ -176,9 +176,9 @@ with col1:
 with col2:
     st.header("🔗 Or Use Sample Images")
     sample_images = {
-        "School Bus": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/First_Student_IC_school_bus_202076.jpg/640px-First_Student_IC_school_bus_202076.jpg",
-        "Cat": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Gatto_europeo4.jpg/640px-Gatto_europeo4.jpg",
-        "Mountain": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg/640px-Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg"
+        "School Bus": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=640&h=480&fit=crop&crop=center",
+        "Cat": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=640&h=480&fit=crop&crop=center",
+        "Mountain": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=640&h=480&fit=crop&crop=center"
     }
 
     selected_sample = st.selectbox("Choose a sample image:", list(sample_images.keys()))
